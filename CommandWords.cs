@@ -8,7 +8,6 @@ namespace WorldOfZuul
 {
     public class CommandWords
     {
-  CustomizeWOZ
         public List<string> ValidCommands { get; } = new List<string> { "north", "east", "south", "west", "look", "back", "whateverrrrr" };
 
         public bool IsValidCommand(string command)
