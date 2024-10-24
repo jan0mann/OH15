@@ -16,18 +16,18 @@
             Room? MainIsland = new("Main Island", "You are standing on the main Island in the middle of the very beautiful pacific ocean. To the east is a large building, to the south is a computing lab, and to the west is the campus pub.");
             Room? OilSpill = new("Island 1", "You find yourself inside a large lecture theatre. Rows of seats ascend up to the back, and there's a podium at the front. It's quite dark and quiet.");
             Room? PlasticWaste = new("Island 2", "You've entered the campus pub. It's a cozy place, with a few students chatting over drinks. There's a bar near you and some pool tables at the far end.");
-            Room? lab = new("Lab", "You're in a computing lab. Desks with computers line the walls, and there's an office to the east. The hum of machines fills the room.");
+            Room? IndustrialWaste = new("Lab", "You're in a computing lab. Desks with computers line the walls, and there's an office to the east. The hum of machines fills the room.");
             Room? CoralReef = new("CoralReef", "You've entered what seems to be an administration office. There's a large desk with a computer on it, and some bookshelves lining one wall.");
 
-            MainIsland.SetExits(null, OilSpill, lab, PlasticWaste); // North, East, South, West
+            MainIsland.SetExits(null, OilSpill, IndustrialWaste, PlasticWaste); // North, East, South, West
 
             OilSpill.SetExit("west", MainIsland);
 
             PlasticWaste.SetExit("east", MainIsland);
 
-            lab.SetExits(MainIsland, CoralReef, null, null);
+            IndustrialWaste.SetExits(MainIsland, CoralReef, null, null);
 
-            CoralReef.SetExit("west", lab);
+            CoralReef.SetExit("west", IndustrialWaste);
 
             currentRoom = MainIsland;
         }
